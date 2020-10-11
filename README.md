@@ -1,11 +1,14 @@
-# Awesome <img height="100" src="https://github.com/equinor/webviz-config/raw/master/webviz_config/_docs/static/webviz-logo.svg?sanitize=true"> plugin projects
+<h1 align="center">
+    Awesome <img height="100" src="https://github.com/equinor/webviz-config/raw/master/webviz_config/_docs/static/webviz-logo.svg?sanitize=true"> plugin projects
+</h1>
+<h4 align="center">Building on other awesome software like [Dash](https://github.com/plotly/dash) and [React](https://github.com/facebook/react)</h4>
+<p align="center">
+<a href="https://awesome.re"><img src="https://awesome.re/badge.svg"></a>
+<img src="https://img.shields.io/github/last-commit/equinor/webviz-awesome">
+<img src="https://img.shields.io/github/license/equinor/webviz-awesome">
+</p>
 
-> ...building on top of other awesome software like [Dash](https://github.com/plotly/dash) and [React](https://github.com/facebook/react). <br/>
 > :mortar_board: If unfamiliar with the Webviz plugin framework, you find [information here](https://github.com/equinor/webviz-config/blob/master/README.md).
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![GitHub last commit](https://img.shields.io/github/last-commit/equinor/webviz-awesome)
-![GitHub](https://img.shields.io/github/license/equinor/webviz-awesome)
 
 ## Content
 
