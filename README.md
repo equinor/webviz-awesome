@@ -20,3 +20,7 @@ This is a curated alphabetical list of [Webviz](https://github.com/equinor/webvi
 | `everviz`           | https://github.com/equinor/everviz            | Plugins used in Everest context                                       |                                                              |  
 | `webviz-subsurface` | https://github.com/equinor/webviz-subsurface  | Subsurface related plugins that are not within `ertviz` scope         | [Here](https://webviz-subsurface-example.azurewebsites.net/) |  
 | `webviz-upcars`     | https://github.com/equinor/webviz-upcars      | Plugins related to upscaling in complex carbonate reservoirs          |                                                              |                                                              |  
+
+## :thought_balloon: "My plugin project is not on the list!"
+
+If your project comply with the two requirements abvove, everyone can make a pull request towards this repository and add it. Getting it on the list enables your plugin project to get increased visibility (if other plugin projects need the same dashboard you can join forces, share cost, improve on each other :bulb: etc.)
