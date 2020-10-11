@@ -1,5 +1,5 @@
 <h1 align="center">Awesome <img height="100" src="https://github.com/equinor/webviz-config/raw/master/webviz_config/_docs/static/webviz-logo.svg?sanitize=true"> plugin projects</h1>
-<h4 align="center">Building on other awesome software like <a href="https://github.com/plotly/dash">Dash</a> and <a href="https://github.com/facebook/react">React</a></h4>
+<h4 align="center">Building on other awesome software like <a href="https://github.com/plotly/dash">Dash</a> and <a href="https://github.com/facebook/react">React</a>.</h4>
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg"></a>
 <img src="https://img.shields.io/github/last-commit/equinor/webviz-awesome">
