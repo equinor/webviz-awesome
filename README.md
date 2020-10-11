@@ -1,4 +1,4 @@
-# Awesome <img height="30" src="https://github.com/equinor/webviz-config/raw/master/webviz_config/_docs/static/webviz-logo.svg?sanitize=true"> plugin projects
+# Awesome <img height="100" src="https://github.com/equinor/webviz-config/raw/master/webviz_config/_docs/static/webviz-logo.svg?sanitize=true"> plugin projects
 
 > ...building on top of other awesome software like [Dash](https://github.com/plotly/dash) and [React](https://github.com/facebook/react). <br/>
 > :mortar_board: If unfamiliar with the Webviz plugin framework, you find [information here](https://github.com/equinor/webviz-config/blob/master/README.md).
