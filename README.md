@@ -12,7 +12,11 @@ This is a curated alphabetical list of Webviz plugin projects. Two hard requirem
 1. The project is well maintained, and has a working CI/CD pipeline.
 
 
-| Project name        | Repository                                    | Short description  | Live example                                                 |
+| Project name        | Repository                                    | Short description  | Live example app                                             |
 |---------------------|-----------------------------------------------|--------------------|--------------------------------------------------------------|
+| `ertviz`            | https://github.com/equinor/ertviz             |                    |                                                              |  
 | `everviz`           | https://github.com/equinor/everviz            |                    |                                                              |  
 | `webviz-subsurface` | https://github.com/equinor/webviz-subsurface  |                    | [Here](https://webviz-subsurface-example.azurewebsites.net/) |  
+| `webviz-upcars`     | https://github.com/equinor/webviz-upcars      |                    |                                                              |  
+
+
