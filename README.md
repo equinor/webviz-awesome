@@ -15,9 +15,9 @@ This is a curated alphabetical list of [Webviz](https://github.com/equinor/webvi
 1. The project is well maintained, and has a working CI/CD pipeline.
 
 
-| Project name with repository link                                   | Short description                                             | Live example                                             |
+| Project name with link                                              | Short description                                             | Live example                                             |
 |---------------------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------------------|
-| [`ertviz`](https://github.com/equinor/ertviz)                      | Plugins used in [ERT](https://github.com/equinor/ert) context |                                                              |  
+| [`ertviz`](https://github.com/equinor/ertviz)                       | Plugins used in [ERT](https://github.com/equinor/ert) context |                                                              |  
 | [`everviz`](https://github.com/equinor/everviz)                     | Plugins used in Everest context                               |                                                              |  
 | [`webviz-subsurface`](https://github.com/equinor/webviz-subsurface) | Subsurface related plugins that are not within `ertviz` scope | [:gift:](https://webviz-subsurface-example.azurewebsites.net/) |  
 | [`webviz-upcars`](https://github.com/equinor/webviz-upcars)         | Plugins related to upscaling in complex carbonate reservoirs  |                                                              |                                                              |  
