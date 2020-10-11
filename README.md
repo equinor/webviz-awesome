@@ -21,7 +21,7 @@ This is a curated alphabetical list of [Webviz](https://github.com/equinor/webvi
 | [`webviz-subsurface`](https://github.com/equinor/webviz-subsurface) | Subsurface related plugins that are not within `ertviz` scope | [Here](https://webviz-subsurface-example.azurewebsites.net/) |  
 | [`webviz-upcars`](https://github.com/equinor/webviz-upcars)         | Plugins related to upscaling in complex carbonate reservoirs  |                                                              |                                                              |  
 
-## :thought_balloon: "My plugin project is not on the list!"
+#### :thought_balloon: "My plugin project is not on the list!"
 
 If your project comply with the two requirements above, everyone can make a pull request towards this repository and add their (or others) open source plugin project.
 
