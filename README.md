@@ -25,4 +25,4 @@ This is a curated alphabetical list of [Webviz](https://github.com/equinor/webvi
 
 If your project comply with the two requirements above, everyone can make a pull request towards this repository and add their (or others) open source plugin project.
 
-Getting it on the list enables your plugin project to get increased visibility (if other plugin projects need the same dashboard you can join forces, share cost, improve on each other :bulb: etc.)
+Getting it on the list enables your plugin project to get increased :eyes: visibility (if other plugin projects need the same dashboard you can join forces :muscle:, share cost :moneybag:, improve on each other :bulb: etc.)
