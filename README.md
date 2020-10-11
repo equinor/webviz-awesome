@@ -24,6 +24,6 @@ This is a curated alphabetical list of [Webviz](https://github.com/equinor/webvi
 
 #### :thought_balloon: "My plugin project is not on the list!"
 
-If your project comply with the two requirements above, everyone can make a pull request towards this repository and add their (or others) open source plugin project.
+If your project comply with the two requirements above, everyone can make a pull request towards this repository and add their (or others) open source plugin project. :rocket:
 
 Getting it on the list enables your plugin project to get increased :eyes: visibility (if other plugin projects need the same dashboard you can join forces :muscle:, share cost :moneybag:, improve on each other :bulb: etc.)
