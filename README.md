@@ -9,7 +9,7 @@
 
 ## Content
 
-This is a curated alphabetical list of Webviz plugin projects. Two hard requirements in order to be on this list:
+This is a curated alphabetical list of [Webviz](https://github.com/equinor/webviz-config) plugin projects. Two hard requirements in order to be on this list:
 1. The project is open-source with an [approved open source license](https://opensource.org/licenses/alphabetical).
 1. The project is well maintained, and has a working CI/CD pipeline.
 
