@@ -1,0 +1,1 @@
+All the schemas in this folder are auto-generated/updated by the GitHub action in this repository.
