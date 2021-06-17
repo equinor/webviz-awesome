@@ -1,0 +1,52 @@
+name: json-schemas
+
+on:
+  schedule:
+    # Run CI daily and update auto-generated webviz schemas
+    - cron: "0 0 * * *"
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - packages: "webviz-subsurface everviz"
+            schema-name: "komodo"
+
+    steps:
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      - name: 📦 Install plugin packages
+        run: |
+          pip install ${{ matrix.packages }}
+
+      - name: 🧾 List all installed packages
+        run: pip freeze
+
+      - name: 📝 Create schema
+        run: webviz schema --output ../webviz-schema-${{ matrix.schema-name }}.json
+
+      - name: 📖 Checkout commit locally
+        uses: actions/checkout@v2
+
+      - name: 📚 Update schema on GitHub pages
+        run: |
+          git config --local user.email "webviz-github-action"
+          git config --local user.name "webviz-github-action"
+          git fetch origin gh-pages
+          git checkout --track origin/gh-pages
+
+          mv ../webviz-schema-${{ matrix.schema-name }}.json ./schemas
+
+          git add .
+
+          if git diff-index --quiet HEAD; then
+            echo "No changes in schema. Skip schema deploy."
+          else
+            git commit -m "Update Webviz JSON schemas"
+            git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
+          fi
