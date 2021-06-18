@@ -5,30 +5,41 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./style.css">
+
   <title>Webviz generated schemas</title>
-  <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
-  </style>
 </head>
 
 <body>
   <h1>Webviz generated schemas</h1>
 
-  <p>If you don't want to regularly run <i>"webviz schema"</i> in order to update your JSON/YAML schema
-    for use in e.g. Visual Studio Code, this site hosts auto-generated schemas that are updated nightly.
+  <p>
+    If you don't want to regularly run <i>"webviz schema"</i> in order to update your YAML validation schema
+    for use in e.g. <a href="https://code.visualstudio.com/">Visual Studio Code</a>, this site hosts
+    auto-generated schemas that are updated nightly.
   </p>
 
   <p>
-      Simply copy the URL below which equals the plugin projects/environment you are using
-      into e.g. Visual Studio Code settings, and we will update it for you.
+    Simply copy the URL below which includes the plugin projects you are using
+    into e.g. Visual Studio Code settings, and you will automatically have a validation schema
+    always using the latest releases of the included plugin projects.
   </p>
 
-  <ul>
-      <li><strong>Latest PyPI releases of plugin projects used in Equinor Komodo:</strong>
-        <a href="https://equinor.github.io/webviz-awesome/schemas/webviz-schema-komodo.json">https://equinor.github.io/webviz-awesome/schemas/webviz-schema-komodo.json</a></li>
-  </ul>
-  
+  <p>
+    See <a href="https://equinor.github.io/webviz-config/#/?id=yaml-schema">Webviz documentation</a>
+    for more details on how to configure Visual Studio Code.
+  </p>
+
+  <table>
+    <tr>
+      <th>Description of compiled schema</th>
+      <th>URL</th>
+    </th>
+    <tr>
+      <td>Includes latest releases of plugin projects used in Equinor Komodo</td>
+      <td><pre>https://raw.githubusercontent.com/equinor/webviz-awesome/gh-pages/schemas/webviz-schema-komodo.json</pre></td>
+    </tr>
+  </table>
+
 </body>
 </html>

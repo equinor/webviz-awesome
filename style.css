@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgb(226,226,226);
+    background: linear-gradient(90deg, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 51%, rgba(236,236,236,1) 100%);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #eeeeee;
+}
+
+th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    background-color: #05BB7C;
+    color: white;
+}
