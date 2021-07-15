@@ -2277,8 +2277,62 @@
                                 {
                                     "type": "object",
                                     "properties": {
+                                        "TornadoPlotterFMU": {
+                                            "description": "General tornado plotter for FMU data from a csv file of responses.",
+                                            "type": "object",
+                                            "properties": {
+                                                "csvfile": {
+                                                    "type": "string"
+                                                },
+                                                "ensemble": {
+                                                    "type": "string"
+                                                },
+                                                "aggregated_csvfile": {
+                                                    "type": "string"
+                                                },
+                                                "aggregated_parameterfile": {
+                                                    "type": "string"
+                                                },
+                                                "initial_response": {
+                                                    "type": "string"
+                                                },
+                                                "single_value_selectors": {},
+                                                "multi_value_selectors": {},
+                                                "contact_person": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "email": {
+                                                            "type": "string"
+                                                        },
+                                                        "phone": {
+                                                            "type": [
+                                                                "integer",
+                                                                "string"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "TornadoPlotterFMU"
+                                    ],
+                                    "additionalProperties": false,
+                                    "minProperties": 1,
+                                    "maxProperties": 1
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
                                         "VolumetricAnalysis": {
-                                            "description": "Dashboard to analyze volumetrics results from\nFMU ensembles.\n\nThis plugin supports both monte carlo and sensitivity runs, and will automatically detect\nwhich case has been run.\n\nThe fluid type is determined by the column name suffixes, either (_OIL or _GAS). This suffix\nis removed and a `FLUID` column is added to be used as a filter or selector.\n\nInput can be given either as aggregated `csv` files or as ensemble name(s)\ndefined in `shared_settings` (with volumetric `csv` files stored per realization).\n",
+                                            "description": "Dashboard to analyze volumetrics results from\nFMU ensembles.\n\nThis plugin supports both monte carlo and sensitivity runs, and will automatically detect\nwhich case has been run.\n\nThe fluid type is determined by the column name suffixes, either (_OIL or _GAS). This suffix\nis removed and a `FLUID_ZONE` column is added to be used as a filter or selector. Volumes from\nthe Water zone will be calculated if Total volumes are included.\n\nProperty columns (e.g. PORO, SW) are automatically computed from the data as long as\nrelevant volumetric columns are present. NET volume and NTG can be computed from a FACIES column\nby defining which facies are non-net.\n\nInput can be given either as aggregated `csv` files or as ensemble name(s)\ndefined in `shared_settings` (with volumetric `csv` files stored per realization).\n",
                                             "type": "object",
                                             "properties": {
                                                 "csvfile_vol": {
@@ -2297,9 +2351,7 @@
                                                 "volfolder": {
                                                     "type": "string"
                                                 },
-                                                "drop_constants": {
-                                                    "type": "boolean"
-                                                },
+                                                "non_net_facies": {},
                                                 "contact_person": {
                                                     "type": "object",
                                                     "properties": {
@@ -2342,6 +2394,9 @@
                                                     "items": {}
                                                 },
                                                 "compdat_file": {
+                                                    "type": "string"
+                                                },
+                                                "well_connection_status_file": {
                                                     "type": "string"
                                                 },
                                                 "zone_layer_mapping_file": {
