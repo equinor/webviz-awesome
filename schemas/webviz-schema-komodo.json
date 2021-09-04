@@ -2386,7 +2386,7 @@
                                     "type": "object",
                                     "properties": {
                                         "WellCompletions": {
-                                            "description": "Visualizes well completions data per well coming from export of the Eclipse COMPDAT output.     Data is grouped per well and zone and can be filtered accoring to flexible well categories.\n\n!> The plugin will not see lumps of completions that are shut using the WELOPEN keyword.     This is being worked on and will be fixed in future relases.\n",
+                                            "description": "Visualizes well completions data per well coming from export of the Eclipse COMPDAT output.     Data is grouped per well and zone and can be filtered accoring to flexible well categories.\n",
                                             "type": "object",
                                             "properties": {
                                                 "ensembles": {
@@ -2601,6 +2601,62 @@
                                     },
                                     "required": [
                                         "WellCrossSectionFMU"
+                                    ],
+                                    "additionalProperties": false,
+                                    "minProperties": 1,
+                                    "maxProperties": 1
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "WellLogViewer": {
+                                            "description": "Uses [videx-welllog](https://github.com/equinor/videx-wellog) to visualize well logs\n    from files stored in RMS well format.\n\n?> Currently tracks for visualizing discrete logs are not included. This will\nbe added in later releases.\n",
+                                            "type": "object",
+                                            "properties": {
+                                                "wellfolder": {
+                                                    "type": "string"
+                                                },
+                                                "logtemplates": {},
+                                                "wellsuffix": {
+                                                    "type": "string"
+                                                },
+                                                "mdlog": {
+                                                    "type": "string"
+                                                },
+                                                "well_tvdmin": {},
+                                                "well_tvdmax": {},
+                                                "well_downsample_interval": {
+                                                    "type": "integer"
+                                                },
+                                                "initial_settings": {},
+                                                "contact_person": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "email": {
+                                                            "type": "string"
+                                                        },
+                                                        "phone": {
+                                                            "type": [
+                                                                "integer",
+                                                                "string"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "wellfolder",
+                                                "logtemplates"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "WellLogViewer"
                                     ],
                                     "additionalProperties": false,
                                     "minProperties": 1,
