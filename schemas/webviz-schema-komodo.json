@@ -278,6 +278,46 @@
                                 {
                                     "type": "object",
                                     "properties": {
+                                        "GradientPlot": {
+                                            "description": "The GradientPlot class implements a plugin for Webviz, for plotting the\ngradient values generated during an Everest optimization.",
+                                            "type": "object",
+                                            "properties": {
+                                                "csv_file": {},
+                                                "contact_person": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "email": {
+                                                            "type": "string"
+                                                        },
+                                                        "phone": {
+                                                            "type": [
+                                                                "integer",
+                                                                "string"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "csv_file"
+                                            ],
+                                            "additionalProperties": false
+                                        }
+                                    },
+                                    "required": [
+                                        "GradientPlot"
+                                    ],
+                                    "additionalProperties": false,
+                                    "minProperties": 1,
+                                    "maxProperties": 1
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
                                         "ObjectivesPlot": {
                                             "description": "The ObjectivesPlot class implements a plugin for Webviz, for plotting the\nobjective values generated during an Everest optimization.\n\nGenerally there are multiple realizations for the objective function values\nat each batch. Additionally, there may be multiple objective functions that\nare optimized simultaneously. These can be plotted either all individually\nin the plot, or they are summarized by plotting the mean value together with\na P10-P90 range.",
                                             "type": "object",
