@@ -32,6 +32,10 @@
                     "initially_pinned": {
                         "description": "State if the menu shall be pinned when initially showing.",
                         "type": "boolean"
+                    },
+                    "initially_collapsed": {
+                        "description": "State if all groups in menu shall initially be collapsed",
+                        "type": "boolean"
                     }
                 },
                 "additionalProperties": false
@@ -2166,6 +2170,64 @@
                                             },
                                             "required": [
                                                 "SegyViewer"
+                                            ],
+                                            "additionalProperties": false,
+                                            "minProperties": 1,
+                                            "maxProperties": 1
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "SeismicMisfit": {
+                                                    "description": "Seismic misfit plotting.\nConsists of several tabs with different plots of\nobserved and simulated seismic 4d attribute.\n* Seismic obs data (overview)\n* Seismic misfit per real (misfit quantification and ranking)\n* Seismic crossplot - sim vs obs (data points statistics)\n* Seismic errorbar plot - sim vs obs (data points statistics)\n* Seismic map plot - sim vs obs (data points statistics)\n",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ensembles": {},
+                                                        "attributes": {},
+                                                        "attribute_sim_path": {
+                                                            "type": "string"
+                                                        },
+                                                        "attribute_obs_path": {
+                                                            "type": "string"
+                                                        },
+                                                        "obs_mult": {
+                                                            "type": "number"
+                                                        },
+                                                        "sim_mult": {
+                                                            "type": "number"
+                                                        },
+                                                        "polygon": {
+                                                            "type": "string"
+                                                        },
+                                                        "realrange": {},
+                                                        "contact_person": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "email": {
+                                                                    "type": "string"
+                                                                },
+                                                                "phone": {
+                                                                    "type": [
+                                                                        "integer",
+                                                                        "string"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": false
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "ensembles",
+                                                        "attributes"
+                                                    ],
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "SeismicMisfit"
                                             ],
                                             "additionalProperties": false,
                                             "minProperties": 1,
