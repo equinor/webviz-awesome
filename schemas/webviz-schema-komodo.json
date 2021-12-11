@@ -2874,6 +2874,9 @@
                                                             "type": "string"
                                                         },
                                                         "logtemplates": {},
+                                                        "colortables": {
+                                                            "type": "string"
+                                                        },
                                                         "wellsuffix": {
                                                             "type": "string"
                                                         },
