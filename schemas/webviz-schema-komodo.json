@@ -2031,7 +2031,7 @@
                                             "type": "object",
                                             "properties": {
                                                 "RftPlotter": {
-                                                    "description": "This plugin visualizes simulated RFT results from\nFMU ensembles combined with ERT observation data.\n\nSeveral visualizations are available:\n\n* Map view of RFT observations.\n\n* Depth vs pressure plot showing simulated RFT data along wells together with observation points.\n\n* Barchart showing sum of mean misfit for ERT observations per realization. One plot per ensemble.\n\n* Crossplot of simulated RFT vs observed value per ERT observation. One plot per ensemble.\n\n* Boxplot showing misfit per ERT observation for each ensemble.\n",
+                                                    "description": "This plugin visualizes simulated RFT results from\nFMU ensembles combined with ERT observation data.\n\nSeveral visualizations are available:\n\n* Map view of RFT observations.\n\n* Depth vs pressure plot showing simulated RFT data along wells together with observation points.\n\n* Barchart showing sum of mean misfit for ERT observations per realization. One plot per ensemble.\n\n* Crossplot of simulated RFT vs observed value per ERT observation. One plot per ensemble.\n\n* Boxplot showing misfit per ERT observation for each ensemble.\n\n* Plots for analysing the parameter response of the RFT data. Not available for aggregated data.\n",
                                                     "type": "object",
                                                     "properties": {
                                                         "csvfile_rft": {
@@ -2228,6 +2228,65 @@
                                             },
                                             "required": [
                                                 "SeismicMisfit"
+                                            ],
+                                            "additionalProperties": false,
+                                            "minProperties": 1,
+                                            "maxProperties": 1
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "SimulationTimeSeries": {
+                                                    "description": null,
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ensembles": {},
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
+                                                        "perform_presampling": {
+                                                            "type": "boolean"
+                                                        },
+                                                        "obsfile": {
+                                                            "type": "string"
+                                                        },
+                                                        "options": {
+                                                            "type": "object"
+                                                        },
+                                                        "sampling": {
+                                                            "type": "string"
+                                                        },
+                                                        "predefined_expressions": {
+                                                            "type": "string"
+                                                        },
+                                                        "line_shape_fallback": {
+                                                            "type": "string"
+                                                        },
+                                                        "contact_person": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "email": {
+                                                                    "type": "string"
+                                                                },
+                                                                "phone": {
+                                                                    "type": [
+                                                                        "integer",
+                                                                        "string"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": false
+                                                        }
+                                                    },
+                                                    "required": [],
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "SimulationTimeSeries"
                                             ],
                                             "additionalProperties": false,
                                             "minProperties": 1,
