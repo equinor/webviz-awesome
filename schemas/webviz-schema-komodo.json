@@ -603,6 +603,9 @@
                                                         "height": {
                                                             "type": "integer"
                                                         },
+                                                        "title_position": {
+                                                            "type": "string"
+                                                        },
                                                         "contact_person": {
                                                             "type": "object",
                                                             "properties": {
@@ -1068,6 +1071,9 @@
                                                             "items": {}
                                                         },
                                                         "gruptree_file": {
+                                                            "type": "string"
+                                                        },
+                                                        "rel_file_pattern": {
                                                             "type": "string"
                                                         },
                                                         "time_index": {
