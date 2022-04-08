@@ -1469,22 +1469,25 @@
                                             "type": "object",
                                             "properties": {
                                                 "ParameterAnalysis": {
-                                                    "description": "This plugin visualizes parameter distributions and statistics. /\n    for FMU ensembles, and can be used to investigate parameter correlations /\n    on reservoir simulation time series data.\n",
+                                                    "description": "This plugin visualizes parameter distributions and statistics.\nfor FMU ensembles, and can be used to investigate parameter correlations\non reservoir simulation time series data.\n",
                                                     "type": "object",
                                                     "properties": {
                                                         "ensembles": {},
-                                                        "csvfile_parameters": {
-                                                            "type": "string"
-                                                        },
-                                                        "csvfile_smry": {
-                                                            "type": "string"
-                                                        },
                                                         "time_index": {
                                                             "type": "string"
                                                         },
                                                         "column_keys": {},
                                                         "drop_constants": {
                                                             "type": "boolean"
+                                                        },
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
+                                                        "csvfile_parameters": {
+                                                            "type": "string"
+                                                        },
+                                                        "csvfile_smry": {
+                                                            "type": "string"
                                                         },
                                                         "contact_person": {
                                                             "type": "object",
@@ -1764,13 +1767,10 @@
                                                     "type": "object",
                                                     "properties": {
                                                         "ensembles": {},
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
                                                         "statistics_file": {
-                                                            "type": "string"
-                                                        },
-                                                        "csvfile_statistics": {
-                                                            "type": "string"
-                                                        },
-                                                        "csvfile_smry": {
                                                             "type": "string"
                                                         },
                                                         "surface_renaming": {},
@@ -1778,6 +1778,12 @@
                                                             "type": "string"
                                                         },
                                                         "column_keys": {},
+                                                        "csvfile_statistics": {
+                                                            "type": "string"
+                                                        },
+                                                        "csvfile_smry": {
+                                                            "type": "string"
+                                                        },
                                                         "contact_person": {
                                                             "type": "object",
                                                             "properties": {
@@ -2652,6 +2658,49 @@
                                         {
                                             "type": "object",
                                             "properties": {
+                                                "SwatinitQC": {
+                                                    "description": "This plugin is used to visualize the output from [check_swatinit](https://fmu-docs.equinor.com/docs/subscript/scripts/check_swatinit.html) which is a QC tool\nfor Water Initialization in Eclipse runs when the `SWATINIT` keyword has been used. It is used to\nquantify how much the volume changes from `SWATINIT` to `SWAT` at time zero in the dynamical model,\nand help understand why it changes.\n",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "csvfile": {
+                                                            "type": "string"
+                                                        },
+                                                        "ensemble": {},
+                                                        "realization": {},
+                                                        "faultlines": {},
+                                                        "contact_person": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "email": {
+                                                                    "type": "string"
+                                                                },
+                                                                "phone": {
+                                                                    "type": [
+                                                                        "integer",
+                                                                        "string"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": false
+                                                        }
+                                                    },
+                                                    "required": [],
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "SwatinitQC"
+                                            ],
+                                            "additionalProperties": false,
+                                            "minProperties": 1,
+                                            "maxProperties": 1
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
                                                 "TornadoPlotterFMU": {
                                                     "description": "General tornado plotter for FMU data from a csv file of responses.",
                                                     "type": "object",
@@ -2755,6 +2804,54 @@
                                             },
                                             "required": [
                                                 "VolumetricAnalysis"
+                                            ],
+                                            "additionalProperties": false,
+                                            "minProperties": 1,
+                                            "maxProperties": 1
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "WellAnalysis": {
+                                                    "description": "This plugin is for visualizing and analysing well data. There are different tabs\nfor visualizing:\n\n* Well Production\n* Well control modes and network pressures\n",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ensembles": {},
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
+                                                        "gruptree_file": {
+                                                            "type": "string"
+                                                        },
+                                                        "time_index": {
+                                                            "type": "string"
+                                                        },
+                                                        "filter_out_startswith": {},
+                                                        "contact_person": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "email": {
+                                                                    "type": "string"
+                                                                },
+                                                                "phone": {
+                                                                    "type": [
+                                                                        "integer",
+                                                                        "string"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": false
+                                                        }
+                                                    },
+                                                    "required": [],
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "WellAnalysis"
                                             ],
                                             "additionalProperties": false,
                                             "minProperties": 1,
