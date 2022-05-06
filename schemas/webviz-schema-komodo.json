@@ -1391,6 +1391,9 @@
                                                         "fault_polygon_attribute": {},
                                                         "map_surface_names_to_fault_polygons": {},
                                                         "map_surface_names_to_well_pick_names": {},
+                                                        "rel_surface_folder": {
+                                                            "type": "string"
+                                                        },
                                                         "contact_person": {
                                                             "type": "object",
                                                             "properties": {
@@ -1754,6 +1757,69 @@
                                             },
                                             "required": [
                                                 "ParameterResponseCorrelation"
+                                            ],
+                                            "additionalProperties": false,
+                                            "minProperties": 1,
+                                            "maxProperties": 1
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "ProdMisfit": {
+                                                    "description": "Visualizes production data misfit at selected date(s).\n\nWhen not dealing with absolute value of differences, difference plots are\nrepresented as: (simulated - observed),\ni.e. negative values means sim is lower than obs and vice versa.\n\n**Features**\n* Visualization of prod misfit at selected time.\n* Visualization of prod coverage at selected time.\n* Heatmap representation of ensemble mean misfit for selected dates.\n",
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "ensembles": {
+                                                            "type": "array",
+                                                            "items": {}
+                                                        },
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
+                                                        "sampling": {
+                                                            "type": "string"
+                                                        },
+                                                        "well_attributes_file": {
+                                                            "type": "string"
+                                                        },
+                                                        "excl_name_startswith": {
+                                                            "type": "array",
+                                                            "items": {}
+                                                        },
+                                                        "excl_name_contains": {
+                                                            "type": "array",
+                                                            "items": {}
+                                                        },
+                                                        "phase_weights": {
+                                                            "type": "object"
+                                                        },
+                                                        "contact_person": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "email": {
+                                                                    "type": "string"
+                                                                },
+                                                                "phone": {
+                                                                    "type": [
+                                                                        "integer",
+                                                                        "string"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "additionalProperties": false
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "ensembles"
+                                                    ],
+                                                    "additionalProperties": false
+                                                }
+                                            },
+                                            "required": [
+                                                "ProdMisfit"
                                             ],
                                             "additionalProperties": false,
                                             "minProperties": 1,
