@@ -983,6 +983,9 @@
                                                             "type": "array",
                                                             "items": {}
                                                         },
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
                                                         "wells": {},
                                                         "contact_person": {
                                                             "type": "object",
@@ -1394,6 +1397,9 @@
                                                         "rel_surface_folder": {
                                                             "type": "string"
                                                         },
+                                                        "color_tables": {
+                                                            "type": "string"
+                                                        },
                                                         "contact_person": {
                                                             "type": "object",
                                                             "properties": {
@@ -1705,6 +1711,9 @@
                                                             "type": "array",
                                                             "items": {}
                                                         },
+                                                        "rel_file_pattern": {
+                                                            "type": "string"
+                                                        },
                                                         "response_file": {
                                                             "type": "string"
                                                         },
@@ -1783,6 +1792,10 @@
                                                             "type": "string"
                                                         },
                                                         "excl_name_startswith": {
+                                                            "type": "array",
+                                                            "items": {}
+                                                        },
+                                                        "excl_name_endswith": {
                                                             "type": "array",
                                                             "items": {}
                                                         },
@@ -2733,7 +2746,9 @@
                                                         },
                                                         "ensemble": {},
                                                         "realization": {},
-                                                        "faultlines": {},
+                                                        "faultlines": {
+                                                            "type": "string"
+                                                        },
                                                         "contact_person": {
                                                             "type": "object",
                                                             "properties": {
@@ -2887,6 +2902,9 @@
                                                             "type": "string"
                                                         },
                                                         "gruptree_file": {
+                                                            "type": "string"
+                                                        },
+                                                        "well_attributes_file": {
                                                             "type": "string"
                                                         },
                                                         "time_index": {
